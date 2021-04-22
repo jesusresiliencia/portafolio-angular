@@ -17,7 +17,6 @@ export class InfoPaginaService {
   }
   
   private  cargarInfo(){
-    console.log("Servicio de infoPagina Listo");
     this.http.get("assets/data/data-pagina.json").subscribe((resp:InfoPagina)=>{
         this.cargada=true;
         this.info=resp;
@@ -25,11 +24,9 @@ export class InfoPaginaService {
   }
 
   private  cargarEquipo(){
-    console.log("Servicio de equipos Listo");
     this.http.get("https://angular-portafolio-37bf6-default-rtdb.firebaseio.com/equipo.json").subscribe((resp:any)=>{
         this.cargada=true;
         this.equipo=resp;
-        console.log(resp);
     });
   }
 }
